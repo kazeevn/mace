@@ -1,5 +1,8 @@
 /BOTNet-datasets
 /build
-mace.egg-info
-test.ipynb
-setup.cfg
+/checkpoints
+/logs
+/results
+/mace.egg-info
+MACE_model.model
+modelsfit.xyz
