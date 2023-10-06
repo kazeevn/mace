@@ -1,20 +1,5 @@
-# Byte-compiled / optimized / DLL files
-__pycache__/
-*.py[cod]
-*$py.class
-
-# Distribution / packaging
-build/
-*.egg-info/
-
-# pytest
-.pytest_cache/
-
-# mypy
-.mypy_cache/
-
-# IDE
-.idea/
-.vscode/
-logs/MACE_run-5.log
-*.txt
+/BOTNet-datasets
+/build
+mace.egg-info
+test.ipynb
+setup.cfg
