@@ -1,7 +1,7 @@
 #!/bin/bash
 cd $HOME/project
-source .scripts/Constructor/get_data.sh
-python3 ./scripts/run_train_.py \
+source scripts/Constructor/get_data.sh
+python3 scripts/run_train_.py \
   --name="MACE_model" \
   --train_file="$DATA_FOLDER/dataset_3BPA/train_300K.xyz" \
   --valid_fraction=0.05 \
