@@ -18,4 +18,4 @@ python3 scripts/run_train_.py \
   --seed=123 \
   --swa \
   --log_dir=/tmp/mace-log \
-  --results-dir=/tmp/results
+  --results_dir=/tmp/results
