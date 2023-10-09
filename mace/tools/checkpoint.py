@@ -130,7 +130,7 @@ class CheckpointIO:
 
         selected_checkpoint_info_list_swa = []
         selected_checkpoint_info_list_no_swa = []
-
+        
         for ckp in selected_checkpoint_info_list:
             if ckp.swa:
                 selected_checkpoint_info_list_swa.append(ckp)
@@ -138,11 +138,13 @@ class CheckpointIO:
                 selected_checkpoint_info_list_no_swa.append(ckp)
         if swa:
             latest_checkpoint_info = max(
-                selected_checkpoint_info_list_swa, key=lambda info: info.epochs
+                selected_checkpoint_info_list_swa, key=lambda info: info.epochs,
+                default=None
             )
         else:
             latest_checkpoint_info = max(
-                selected_checkpoint_info_list_no_swa, key=lambda info: info.epochs
+                selected_checkpoint_info_list_no_swa, key=lambda info: info.epochs,
+                default=None
             )
         return latest_checkpoint_info.path
 
