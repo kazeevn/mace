@@ -20,4 +20,5 @@ python3 ./scripts/run_train_.py \
   --default_dtype="float32" \
   --device=cpu \
   --seed=123 \
-  --swa
+  --swa \
+  --log_dir=/tmp/mace-log
