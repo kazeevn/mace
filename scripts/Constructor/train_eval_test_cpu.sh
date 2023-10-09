@@ -1,7 +1,6 @@
 #!/bin/bash
-source ./get_data.sh
 cd $HOME/project
-
+source .scripts/Constructor/get_data.sh
 # TODO(kazeevn) limit pytorch's CPU ambitions to ROLOS_AVAILABLE_CPU
 python3 ./scripts/run_train_.py \
   --name="MACE_model" \
