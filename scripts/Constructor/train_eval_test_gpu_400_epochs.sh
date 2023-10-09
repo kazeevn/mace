@@ -1,5 +1,5 @@
 #!/bin/bash
-cd $HOME/project
+# Exports DATA_FOLDER
 source scripts/Constructor/get_data.sh
 python3 scripts/run_train_.py \
   --name="MACE_model" \
