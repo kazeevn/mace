@@ -146,7 +146,10 @@ class CheckpointIO:
                 selected_checkpoint_info_list_no_swa, key=lambda info: info.epochs,
                 default=None
             )
-        return latest_checkpoint_info.path
+        if latest_checkpoint_info is None:
+            return None
+        else:
+            return latest_checkpoint_info.path
 
     def save(
         self, checkpoint: Checkpoint, epochs: int, keep_last: bool = False
