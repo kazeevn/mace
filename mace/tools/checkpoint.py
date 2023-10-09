@@ -146,6 +146,9 @@ class CheckpointIO:
                 selected_checkpoint_info_list_no_swa, key=lambda info: info.epochs,
                 default=None
             )
+        # TODO: this is not a real fix - the logic of a missing checkpoint should be handedled upstream
+        # Also, len(selected_checkpoint_info_list) is already checked - so here were deal with the swa
+        # schenations
         if latest_checkpoint_info is None:
             return None
         else:
