@@ -18,4 +18,5 @@ python3 scripts/run_train_.py \
   --device=cpu \
   --seed=123 \
   --swa \
-  --log_dir=/tmp/mace-log
+  --log_dir=/tmp/mace-log \
+  --results-dir=/tmp/results
