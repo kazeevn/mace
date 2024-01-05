@@ -1,0 +1,49 @@
+According to the task https://youtrack.constr.dev/issue/ROL-6323/ROL-Create-extended-MACE-template-for-the-Cambridge-research-group 
+the foloowing modules should be installed:
+1. ASE
+2. MatSciPy
+3. LAMMPS
+4. Quantum Espresso
+
+The testing (see the project https://research.constructor.tech/projects/1f9c2ceb89ed451aa597f444f2680d79/desks/11ffebbd534646edb5ee2774e76d1472/environment ,
+GIT branch 'TestXMace', notebook 'TestXMace.ipynb') has revealed the foloowing problems:
+
+1. ASE
+
+1) environment variables not added (see https://pypi.org/project/ase/ , section Installation) - failed
+2) run command 'ace test' in the terminal (see https://pypi.org/project/ase/ , section Testing) - failed due to item 1) above
+3) run command 'ace test' in the notebook cell (see below) - failed, 
+4) run example script (see https://pypi.org/project/ase/ , section Example) see below - failed
+
+Conclusion: ACE module is not properly installed
+
+2. MatSciPy
+
+1) matscipy.cauchy_born is absent but is present in the GIT https://github.com/libAtoms/matscipy/blob/master/matscipy/cauchy_born.py
+2) matscipy.fracture_mechanics.clusters is not equal to https://github.com/libAtoms/matscipy/blob/master/matscipy/fracture_mechanics/clusters.py 
+in the matscipy GIT, in particular there is no function get_alpha_period
+3) matscipy.fracture_mechanics.crack is not equal to https://github.com/libAtoms/matscipy/blob/master/matscipy/fracture_mechanics/crack.py 
+in the matscipy GIT, in particular there is no function isotropic_modeII_crack_tip_displacement_field
+4) liblammps.so: cannot open shared object file: No such file or directory
+5) matscipy.gamma_surface  is absent but is present in the GIT https://github.com/libAtoms/matscipy/blob/master/matscipy/gamma_surface.py
+6) matscipy.numerical is not equal to https://github.com/libAtoms/matscipy/blob/master/matscipy/numerical.py
+in the matscipy GIT, in particular function numerical_hessian has different keyword argument (dx instaedof d)
+7) Other errors can be found in the above mentioned notebook.
+
+Conclusion: The MATSCIPY version is not recent as requested in ther task, so MTSCIPY is not properly installed.
+
+3. LAMMPS
+
+1) LAMMPS executable not found (see above mentioned notebook)
+
+Conclusion: LAMMPS is not properly installed.
+
+4. Quantum Espresso
+
+1) Quantum Espresso executable not found (see above mentioned notebook)
+
+Conclusion: Quantum Espresso is not properly installed.
+
+
+
+
