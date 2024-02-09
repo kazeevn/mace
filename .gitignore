@@ -3,7 +3,9 @@
 /checkpoints
 /logs
 /results
-/mace.egg-info
+/model
+/output
+/downloads
 MACE_model.model
 modelsfit.xyz
 .rolos_env.sh.log

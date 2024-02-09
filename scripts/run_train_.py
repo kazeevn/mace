@@ -4,6 +4,10 @@
 # This program is distributed under the MIT License (see MIT.md)
 ###########################################################################################
 
+import sys
+sys.path.append('/home/coder/.local/lib/rolos-cuda-torch/site-packages')
+# sys.path.append('~/project')
+
 import ast
 import logging
 from pathlib import Path
