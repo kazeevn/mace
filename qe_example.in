@@ -21,7 +21,7 @@
                  mixing_beta = 0.7d0 ,
  /
 ATOMIC_SPECIES
-   Al   26.98150  Al.pz-n-rrkjus_psl.0.1.UPF 
+   Al   26.98150  Al.pz-vbc.UPF 
 ATOMIC_POSITIONS crystal 
    Al      0.000000000    0.000000000    0.000000000    
 K_POINTS automatic 
